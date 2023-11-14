@@ -1,0 +1,216 @@
+<!--Division for GeeksForGeeks heading-->
+<!--<form-app></form-app>--> 
+<router-outlet></router-outlet>
+
+
+<!--
+<button (click)="getEven([1,2,3,4,5,6,7,8])">getit</button>
+{{evenNumbers}}
+<div *ngFor="let num of evenNumbers">
+ {{num}}
+</div>
+
+<button (click)="getSUm([1,2,3])">total</button>
+{{total}}
+
+<p>{{fullName}}</p>
+<div  *ngFor = "let book of books" > 
+  <h2>{{book.title}}</h2> 
+  <h2> {{book.author}}</h2>
+  <img src= {{book.img}} alt="Italian Trulli"/>
+  <h6>{{book.description}}</h6>
+  <button (click)="deleteBook(book)"> Delete</button>
+</div>
+
+
+
+<form #dataForm="ngForm" (ngSubmit)="addBook(employee.value)">
+ 
+      <input name="title" ngModel placeholder="Title" id="title" type="text" class="input-field" /><br/><br/>
+      <input name="author" ngModel placeholder="Author" id="author" type="text" class="input-field" /><br/><br/>
+      <input name="img" ngModel placeholder="Image link" id="img" type="text" class="input-field" /><br/><br/>
+      <input name="description" ngModel placeholder="description " id="description"  type="text" class="input-field" /><br/><br/>                >
+     <button>Add Data </button>
+  
+</form>
+
+<form #employeeForm="ngForm" (ngSubmit)="createEmployee(employeeForm.value)">
+
+  <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" /><br/><br/>
+  <input name="salary" ngModel placeholder="Salary" id="salary" type="text" class="input-field" /><br/><br/>
+  <input name="age" ngModel placeholder="Age" id="age" type="text" class="input-field" /><br/><br/>
+ <button> Create an Employee </button>
+</form>
+<form #sumData="ngForm" (ngSubmit)="doSum(sumData.value.x, sumData.value.y)">
+  <input name="x" ngModel placeholder="Enter the value of x" type="number"/><br/><br/>
+  <input name="y" ngModel placeholder="Enter the value of y" type="number"/><br/><br/>
+ <button> Show sum </button>
+</form>
+
+<h1> Sum of x and y is {{sum}}</h1>
+
+<form #userForm="ngForm" (ngSubmit)="createUser(userForm.value)">
+  <input name="name" ngModel placeholder="Name" id="name" type="text" class="input-field" /><br/><br/>
+  <input name="rollNumber" ngModel placeholder="rollNumber" id="rollNumber" type="number" class="input-field" /><br/><br/>
+  <button>create an user </button>
+  </form>
+
+  <form #substractData="ngForm" (ngSubmit)="doSubstract(substractData.value.c,substractData.value.d)">
+    <input name="c" ngModel placeholder="Enter the value of c" type="number" class="input-field"/><br/><br/>
+    <input name="d" ngModel placeholder="Enter the value of d"  type="number"  class="input-field"/><br/><br/>
+    <button>show result</button>
+  </form>
+
+<h1 *ngIf="substract">
+ Result is   {{substract}}
+</h1>
+
+<form #multiplyObj="ngForm" (ngSubmit)="doMultiply(multiplyObj.value.u, multiplyObj.value.v)">
+  <input name="u" ngModel placeholder="Enter the value of u" type="number" ><br/><br/>
+  <input name="v" ngModel placeholder="Enter the value of v" type="number" ><br/><br/>
+  <button>read me</button>
+</form>
+
+  <h3>{{multiply}}</h3>
+
+  <form #divideGt="ngForm" (ngSubmit)="doDivide(divideGt.value.i, divideGt.value.j)">
+    <input name="i" ngModel placeholder="Enter the value i" type="number"><br/><br/>
+    <input name="j" ngModel placeholder="Enter the value j" type="number"><br/><br/>
+    <button>get me</button>
+
+  </form>
+ <h3>{{divide}}</h3>
+
+ <form #sumGet="ngForm" (ngSubmit)="findSum(sumGet.value.a,sumGet.value.b,sumGet.value.e)">
+  <input name="a" ngModel placeholder="Enter the value a" type="number"><br/><br/>
+  <input name="b" ngModel placeholder="Enter the value b" type="number"><br/><br/>
+  <input name="e" ngModel placeholder="Enter the value e" type="number"><br/><br/>
+  <button>click me</button>
+  </form>
+ <h3>{{combined}}</h3>
+
+ <form #multipleGet="ngForm" (ngSubmit)="getMultiple(multipleGet.value.f,multipleGet.value.g,multipleGet.value.h)">
+  <input name="f" ngModel placeholder="Enter the value f" type="number"><br/><br/>
+  <input name="g" ngModel placeholder="Enter the value g" type="number"><br/><br/>
+  <input name="h" ngModel placeholder="Enter the value h" type="number"><br/><br/>
+  <button>Here it is</button>
+ </form>
+ <h3>{{multiple}}</h3>
+
+ <form #catchBig="ngForm" (ngSubmit)="getMaxNum(catchBig.value)" >
+  <input name="n" ngModel placeholder="Enter the value of n" type="number"><br/><br/>
+  <input name="m" ngModel placeholder="Enter the value of m" type="number"><br/><br/>
+  <input name="isChecked" ngModel placeholder="Enter the value of m" type="checkbox"><br/><br/>
+  <input name="fruit" value="apple" ngModel placeholder="Enter the value of m" type="radio"><br/><br/>
+
+
+  <button>get max number</button>
+ </form>
+ <h3>{{maxNum}}</h3>
+<button (click) = "createEmployee()"> Create an employee</button>-->
+
+<!--<div>
+    <h1> Employee Details </h1>
+    <h2>Name: {{employee.employee_name}}</h2>
+    <h2> Salary: {{employee.employee_salary}}</h2>
+    <h2>Age: {{employee.employee_age}}</h2>
+</div>-->
+
+
+<!--<div  *ngFor = "let emp of employees"  class="intro"> 
+  <h2>Name: {{emp.employee_name}}</h2>
+  <h6> Salary: {{emp.employee_salary}}</h6>
+  <h6>Age: {{emp.employee_age}}</h6>
+</div>
+
+<div *ngFor = "let user of users" class="intro">
+  <h2>Name:{{user.name}}</h2>
+  <h2>rollNumber:{{user.rollNumber}}</h2>
+  </div>
+
+ 
+  <button (click)="getAllUsers()">get data of all users</button>
+
+  <div *ngFor="let user of allUsers" class="intro">
+    <h2>Name:{{user.name}}</h2>
+    
+      <button (click)="getCurrentUser(user)"> Details</button>
+    
+  </div>
+
+  <div *ngIf="currentUser"> 
+    <h1> User Details:</h1>
+    <h2>Name:{{currentUser.name}}</h2>
+    <h2>rollNumber:{{currentUser.rollNumber}}</h2>
+  </div>
+
+  
+  <div *ngFor="let diary of products">
+    <h2>Name:{{diary.name}}</h2>
+    <button (click)="findProduct(diary)">Details</button>
+    </div>
+
+  <div *ngFor="let stud of students">
+    <h1>currentstudent:{{stud.name}}</h1>
+      <button (click)="findStudent(stud)">Details</button>
+  </div>
+
+ 
+     
+
+    <div>
+      <h3>price:{{product.price}}</h3>
+      <h3>production_country:{{product.production_country}}</h3>
+      <h3>ISBN:{{product.ISBN}}</h3>
+
+    </div>
+
+
+    <div *ngFor="let good of fruits">
+      <h2>name:{{good.name}}</h2>
+      <button (click)="getFruit(good)">Details</button>
+    </div>
+    <div>
+      <h2>name:{{fruit.name}}</h2>
+      <h2>weight:{{fruit.weight}}</h2>
+      <h2>price:{{fruit.price}}</h2>
+    </div>
+<div *ngFor="let ful of trees">
+  <h2>name:{{ful.name}}</h2>
+  <button (click)="findTree(ful)">Show more</button>
+</div>
+<div>
+  <h2>name:{{tree.name}}</h2>
+  <h2>height:{{tree.height}}</h2>
+  <h2>color:{{tree.color}}</h2>
+  <h2>weight:{{tree.weight}}</h2>
+</div>
+
+<button (click)="onClickButton()">Tap here</button>
+
+
+{{greeting}}
+
+<input [(ngModel)]="xy"/>
+
+<p>My name: {{xy}}</p>
+
+
+
+
+<child-app-root name = "Aakifah Jahan Madripur" rollNumber ="22"  nationality= "USA" phoneNumber="7347659173"></child-app-root>
+
+
+
+
+
+
+
+<div  *ngFor = "let sas of names">
+  <h3>Name:{{sas.employee_name}}</h3>
+
+</div>-->
+
+
+
+

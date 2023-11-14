@@ -1,0 +1,6 @@
+<div *ngFor="let university of universities">
+  <h3>name: {{university.name}}</h3>
+  <button (click)="getUniversity(university)">Details of University</button>
+</div>
+
+<child-app-root univ={{university}} ></child-app-root>

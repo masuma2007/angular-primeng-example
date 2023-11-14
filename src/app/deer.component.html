@@ -1,0 +1,32 @@
+
+<input type="text" pInputText [(ngModel)]="value" />
+    <p-calendar [(ngModel)]="date"></p-calendar>
+
+<h1>{{date}}</h1>
+<h1>{{value}}</h1>
+
+<p-button >hhh</p-button><br/>
+
+
+<p-checkbox [(ngModel)]="mm" [binary]="true" inputId="binary"></p-checkbox>
+
+{{mm}}
+
+<div class="card">
+    <p-table [value]="fruits" [tableStyle]="{ 'min-width': '50rem' }">
+        <ng-template pTemplate="header">
+            <tr>
+                <th>Name</th>
+                <th>Weight</th>
+                <th>Price</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-fruit>
+            <tr>
+                <td>{{ fruit.name }}</td>
+                <td>{{ fruit.weight }}</td>
+                <td>{{ fruit.price }}</td>
+            </tr>
+        </ng-template>
+    </p-table>
+</div>
